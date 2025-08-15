@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayaal - Your Team's AI-Powered Command Center</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Use Tailwind CSS for a clean, modern look -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Lucide Icons for clean, modern vectors -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for a polished look */
+        :root {
+            --color-primary: #025A5F;
+            --color-secondary: #00A693; /* A brighter, more vibrant secondary color */
+            --color-background: #F8F9FA; /* A very light gray for a clean look */
+            --color-text: #212529;
+            --color-light-text: #6C757D;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+
+        /* Hero section specific styling */
+        .hero-section {
+            background: linear-gradient(to bottom, var(--color-background) 0%, #E2E3E8 100%);
+        }
+
+        .cta-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.1), 0 2px 8px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card, .testimonial-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .feature-card:hover, .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Animation for the hero shield icon */
+        @keyframes pulse-shield {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .animate-pulse-shield {
+            animation: pulse-shield 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 max-w-7xl">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16 md:mb-24">
+            <div class="flex flex-col items-center">
+                <!-- Company Logo -->
+                <img src="https://i.ibb.co/BHR0H0bk/logo.png" alt="Prayaal Logo" class="mx-auto h-16 md:h-24 w-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/150x50/333/fff?text=Prayaal+Logo';">
+                
+                <!-- Hero Heading with AI-Powered Command Center -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-4 md:leading-tight">
+                    Your Team’s <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-emerald-600">AI-Powered Command Center</span>
+                </h1>
+                
+                <!-- Subheading -->
+                <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                    Never miss an important update again — even if you weren’t tagged. Prayaal keeps your remote & hybrid teams perfectly in sync.
+                </p>
+            </div>
+        </header>
+
+        <!-- Key Features Section (Renamed from Benefits) -->
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-3xl lg:text-4xl font-extrabold text-center text-gray-900 mb-12">
+                Designed for Modern Work
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-md text-center">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="bell" class="w-10 h-10 text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Smart, Noise-Free Alerts</h3>
+                    <p class="text-gray-600">
+                        Get notified only when it matters. Our AI filters out the noise so you can focus on what's critical.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-md text-center">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="gauge" class="w-10 h-10 text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Daily AI Digests</h3>
+                    <p class="text-gray-600">
+                        Receive a concise, AI-generated summary of your team's day. No more scrolling through endless threads.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 3 -->
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-md text-center">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="folder-check" class="w-10 h-10 text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">One Unified Workspace</h3>
+                    <p class="text-gray-600">
+                        Manage members, tasks, notes, and discussions in a single, streamlined hub.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 4 -->
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-md text-center">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="cloud" class="w-10 h-10 text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Built for the AI Era</h3>
+                    <p class="text-gray-600">
+                        Ensure your team is indispensable by always providing them with the full, contextual picture.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 5 -->
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-md text-center">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="plug" class="w-10 h-10 text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Seamless Integrations</h3>
+                    <p class="text-gray-600">
+                        Connect with the tools you already use, like Slack, Teams, Gmail, Notion, Jira, and more.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-3xl lg:text-4xl font-extrabold text-center text-gray-900 mb-12">
+                What Our Early Users Are Saying
+            </h2>
+            <div class="testimonial-card bg-white p-10 rounded-2xl shadow-md text-center max-w-3xl mx-auto border-l-4 border-emerald-500">
+                <blockquote class="text-lg italic text-gray-700">
+                    "This is exactly the solution our team has been looking for. It's like having an assistant who never sleeps — it catches everything I’d otherwise miss."
+                </blockquote>
+                <cite class="block mt-6 text-sm font-semibold text-gray-900">— Prospective User</cite>
+            </div>
+        </section>
+
+        <!-- Call-to-Action Section -->
+        <section class="text-white p-10 md:p-12 rounded-2xl text-center" style="background-color: var(--color-primary);">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4">Be the first to experience Prayaal.</h2>
+            <p class="text-lg mb-6">Join the waitlist today and get exclusive access.</p>
+            
+            <a href="mailto:support@prayaal.com?subject=Waitlist%20Request&body=I%20would%20like%20to%20join%20the%20Prayaal%20waitlist." class="cta-button inline-block w-full sm:w-auto px-12 py-4 rounded-full font-bold text-gray-900 bg-emerald-400 hover:bg-emerald-300">
+                Join the Waitlist
+            </a>
+        </section>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center text-gray-500 text-sm mt-16 md:mt-24 py-8 border-t border-gray-300">
+        <p>
+            &copy; 2024 Prayaal Inc. All rights reserved.
+        </p>
+        <p class="mt-2">
+            Prayaal is currently in private beta. By joining, you’ll help shape the future of AI-powered collaboration.
+        </p>
+        <div class="flex justify-center mt-4 space-x-4">
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+        </div>
+    </footer>
+    
+    <!-- Script to render Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
