@@ -16,7 +16,7 @@
         /* Custom styles for a polished look */
         :root {
             --color-primary: #025A5F;
-            --color-secondary: #00A693; /* A brighter, more vibrant secondary color */
+            --color-secondary: #00A693; /* A brighter, more vibrant secondary colaor */
             --color-background: #F8F9FA; /* A very light gray for a clean look */
             --color-text: #212529;
             --color-light-text: #6C757D;
@@ -45,7 +45,7 @@
 
         .feature-card, .testimonial-card {
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1), 1px 1px 2px 0 rgba(0, 0, 0, 0.06);
         }
 
         .feature-card:hover, .testimonial-card:hover {
@@ -66,14 +66,29 @@
     </style>
 </head>
 <body class="antialiased">
+    <!-- Navigation Bar -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo on the left -->
+            <div class="flex-shrink-0 flex items-center space-x-2">
+                <img src="https://i.ibb.co/BHR0H0bk/logo.png" alt="Prayaal Logo" class="h-10 md:h-12 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/150x50/333/fff?text=Prayaal+Logo';">
+                <span class="text-2xl font-bold text-gray-900">Prayaal</span>
+            </div>
+            
+            <!-- Waitlist button on the right -->
+            <div class="flex items-center">
+                <a href="mailto:support@prayaal.com?subject=Waitlist%20Request&body=I%20would%20like%20to%20join%20the%20Prayaal%20waitlist." class="cta-button inline-block px-6 py-2 rounded-full font-bold text-sm text-gray-900 bg-emerald-400 hover:bg-emerald-300">
+                    Join the Waitlist
+                </a>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 max-w-7xl">
         
         <!-- Header Section -->
         <header class="text-center mb-16 md:mb-24">
             <div class="flex flex-col items-center">
-                <!-- Company Logo -->
-                <img src="https://i.ibb.co/BHR0H0bk/logo.png" alt="Prayaal Logo" class="mx-auto h-16 md:h-24 w-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/150x50/333/fff?text=Prayaal+Logo';">
-                
                 <!-- Hero Heading with AI-Powered Command Center -->
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-4 md:leading-tight">
                     Your Team’s <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-emerald-600">AI-Powered Command Center</span>
@@ -177,7 +192,7 @@
     <!-- Footer Section -->
     <footer class="text-center text-gray-500 text-sm mt-16 md:mt-24 py-8 border-t border-gray-300">
         <p>
-            &copy; 2024 Prayaal Inc. All rights reserved.
+            &copy; <script> document.write(new Date().getFullYear()) </script> Prayaal Inc. All rights reserved.
         </p>
         <p class="mt-2">
             Prayaal is currently in private beta. By joining, you’ll help shape the future of AI-powered collaboration.
